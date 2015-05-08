@@ -44,4 +44,20 @@ public class PairProEnTest {
 		String actual = en.translateEng(30);
 		assertThat(actual,is(expected));
 	}
+	
+	@Test
+	public void ‚²‚¶‚ã‚¤‚Í‚¿‚©‚çfifty_eight() {
+		IntoToEng en = new IntoToEng();
+		String expected = "fifty eight";
+		String actual = en.translateEng(58);
+		assertThat(actual,is(expected));
+	}
+	
+	@Test
+	public void ‚«‚ã‚¤‚¶‚ã‚¤‚«‚ã‚¤‚©‚çninety_nine() {
+		IntoToEng en = new IntoToEng();
+		String expected = "ninety nine";
+		String actual = en.translateEng(99);
+		assertThat(actual,is(expected));
+	}
 }
