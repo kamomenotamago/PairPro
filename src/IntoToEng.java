@@ -12,7 +12,7 @@ public class IntoToEng {
 
 	    //数値を英訳する変換するメソッド
 	    static String translateEng(int n) {
-	    	String[] number = {"","one","two","three","four","five","six","seven","eight","nine"};
+	    	String[] number = {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"};
 	        return number[n];
 	}
 
