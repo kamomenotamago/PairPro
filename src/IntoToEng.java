@@ -12,8 +12,13 @@ public class IntoToEng {
 
 	    //数値を英訳する変換するメソッド
 	    static String translateEng(int n) {
-	    	String[] number = {"","one","two","three","four","five","six","seven","eight","nine"};
-	        return number[n];
+	    	String[] number = {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"};
+	    	String[] boss = {"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
+	    	int forBoss = n/10;
+	    	int forNumber = n%10;
+	        if(forNumber==0) return boss[forBoss];
+	        if(n>=21) return boss[forBoss]+" "+number[forNumber];
+	        else return number[n];
 	}
 
 }
