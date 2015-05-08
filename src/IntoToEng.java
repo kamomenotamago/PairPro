@@ -14,11 +14,17 @@ public class IntoToEng {
 	    static String translateEng(int n) {
 	    	String[] number = {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"};
 	    	String[] boss = {"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
-	    	int forBoss = n/10;
+	    	
+	    	int[] scan = new scan[5];
+	    	while(k>=10){
+	    		
+	    	}
+	    	
+	    	/*int forBoss = n/10;
 	    	int forNumber = n%10;
 	        if(forNumber==0) return boss[forBoss];
 	        if(n>=21) return boss[forBoss]+" "+number[forNumber];
-	        else return number[n];
+	        else return number[n];*/
 	}
 
 }
