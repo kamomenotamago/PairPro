@@ -12,19 +12,24 @@ public class IntoToEng {
 
 	    //数値を英訳する変換するメソッド
 	    static String translateEng(int n) {
-	    	String[] number = {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"};
+	    	String[] number = {"","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"};
 	    	String[] boss = {"","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
-	    	
-	    	int[] scan = new scan[5];
-	    	while(k>=10){
-	    		
+	    	int k=n;
+	    	String ans = "";
+	    	if(n==0)return "zero";
+	    	if(k>99){
+	    		ans = number[k/100]+" hundred";
+	    		k=k%100;
+	    		if(k!=0) ans += " ";
 	    	}
 	    	
-	    	/*int forBoss = n/10;
-	    	int forNumber = n%10;
-	        if(forNumber==0) return boss[forBoss];
-	        if(n>=21) return boss[forBoss]+" "+number[forNumber];
-	        else return number[n];*/
+	    	int forBoss = k/10;
+	    	int forNumber = k%10;
+	        if(forNumber==0) ans += boss[forBoss];
+	        else if(k>=21 && forNumber!=0) ans += boss[forBoss]+" "+number[forNumber];
+	        else ans += number[k];
+	        
+	    	return ans;
 	}
 
 }
