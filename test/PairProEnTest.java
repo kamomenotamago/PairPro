@@ -68,4 +68,12 @@ public class PairProEnTest {
 		String actual = en.translateEng(100);
 		assertThat(actual,is(expected));
 	}
+	
+	@Test
+	public void ‚«‚ã‚¤‚Ð‚á‚­‚©‚ç‚³‚ñ() {
+		IntoToEng en = new IntoToEng();
+		String expected = "nine hundred thirteen";
+		String actual = en.translateEng(913);
+		assertThat(actual,is(expected));
+	}
 }
