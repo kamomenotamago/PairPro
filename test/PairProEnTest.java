@@ -20,4 +20,28 @@ public class PairProEnTest {
 		String actual = en.translateEng(10);
 		assertThat(actual,is(expected));
 	}
+	
+	@Test
+	public void ‚É‚¶‚ã‚¤‚©‚çtwenty() {
+		IntoToEng en = new IntoToEng();
+		String expected = "twenty";
+		String actual = en.translateEng(20);
+		assertThat(actual,is(expected));
+	}
+	
+	@Test
+	public void ‚¶‚ã‚¤‚³‚ñ‚©‚çtwenty_three() {
+		IntoToEng en = new IntoToEng();
+		String expected = "twenty three";
+		String actual = en.translateEng(23);
+		assertThat(actual,is(expected));
+	}
+	
+	@Test
+	public void ‚³‚ñ‚¶‚ã‚¤‚©‚çtwenty_three() {
+		IntoToEng en = new IntoToEng();
+		String expected = "thirty";
+		String actual = en.translateEng(30);
+		assertThat(actual,is(expected));
+	}
 }
