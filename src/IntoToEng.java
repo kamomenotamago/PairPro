@@ -17,6 +17,12 @@ public class IntoToEng {
 	    	int k=n;
 	    	String ans = "";
 	    	if(n==0)return "zero";
+	    	
+	    	if(k>999){
+	    		ans = number[k/1000]+" thousand";
+	    		k=k%1000;
+	    		if(k!=0) ans += " ";
+	    	}
 	    	if(k>99){
 	    		ans = number[k/100]+" hundred";
 	    		k=k%100;
