@@ -17,19 +17,35 @@ public class IntoToEng {
 	    	int k=n;
 	    	String ans = "";
 	    	if(n==0)return "zero";
+	    	
+	    	if(k>999){
+	    		ans += number[k/1000]+th(k);
+	    		k=k%1000;
+	    		if(k!=0) ans += " ";
+	    	}
 	    	if(k>99){
-	    		ans = number[k/100]+" hundred";
+	    		ans += number[k/100]+th(k);
 	    		k=k%100;
 	    		if(k!=0) ans += " ";
 	    	}
-	    	
+
 	    	int forBoss = k/10;
 	    	int forNumber = k%10;
 	        if(forNumber==0) ans += boss[forBoss];
 	        else if(k>=21 && forNumber!=0) ans += boss[forBoss]+" "+number[forNumber];
 	        else ans += number[k];
+
 	        
 	    	return ans;
 	}
+	    static String th(int k){
+	    	if(k>999){
+	    		return " thousand";
+	    	}
+	    	if(k>99){
+	    		return " hundred";
+	    	}
+	    	return "";
+	    }
 
 }
